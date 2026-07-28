@@ -46,7 +46,7 @@ export default function HomePage() {
           alt="Weidner Lawnscape crew maintaining a residential lawn"
           fill
           priority
-          className="object-cover object-[50%_22%] brightness-[1.1] sm:object-[50%_18%]"
+          className="object-cover object-[50%_48%] brightness-[1.1] sm:object-[50%_44%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-evergreen-deep/82 via-evergreen-deep/58 to-evergreen-deep/28" />
