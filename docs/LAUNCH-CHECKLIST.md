@@ -2,6 +2,7 @@
 
 ## Before applying migrations
 
+- [ ] Complete hobby platform prep: `signalworks-platform/hobby/docs/HOBBY-DATABASE-PREPARATION.md` (audit SQL + gate checklist)
 - [x] Review `docs/MIGRATION-SAFETY.md`
 - [x] Confirm `weidner_` prefix registered in shared-supabase products map
 - [x] Confirm RLS isolation plan in `docs/RLS-ISOLATION.md`

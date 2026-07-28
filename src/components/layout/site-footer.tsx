@@ -17,7 +17,7 @@ export function SiteFooter() {
             alt={siteConfig.name}
             width={200}
             height={72}
-            className="h-11 w-auto brightness-0 invert"
+            className="h-11 w-auto rounded-sm"
           />
           <p className="max-w-sm text-sm leading-relaxed text-sand/80">
             {siteConfig.description}

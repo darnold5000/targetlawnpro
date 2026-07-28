@@ -21,12 +21,17 @@ export function SectionHeading({
   title,
   description,
   align = "left",
+  theme = "default",
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
+  /** Use on dark section backgrounds (e.g. bg-evergreen). */
+  theme?: "default" | "on-dark";
 }) {
+  const onDark = theme === "on-dark";
+
   return (
     <div
       className={cn(
@@ -35,15 +40,30 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? (
-        <p className="text-sm font-semibold tracking-wide text-leaf uppercase">
+        <p
+          className={cn(
+            "text-sm font-semibold tracking-wide uppercase",
+            onDark ? "text-leaf-soft" : "text-leaf",
+          )}
+        >
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="mt-2 font-display text-3xl text-evergreen-deep sm:text-4xl">
+      <h2
+        className={cn(
+          "mt-2 font-display text-3xl sm:text-4xl",
+          onDark ? "text-white" : "text-evergreen-deep",
+        )}
+      >
         {title}
       </h2>
       {description ? (
-        <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
+        <p
+          className={cn(
+            "mt-4 text-base leading-relaxed sm:text-lg",
+            onDark ? "text-sand/95" : "text-muted",
+          )}
+        >
           {description}
         </p>
       ) : null}

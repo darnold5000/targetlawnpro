@@ -46,10 +46,10 @@ export default function HomePage() {
           alt="Weidner Lawnscape crew maintaining a residential lawn"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-[50%_22%] brightness-[1.1] sm:object-[50%_18%]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-evergreen-deep/92 via-evergreen-deep/75 to-evergreen-deep/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-evergreen-deep/82 via-evergreen-deep/58 to-evergreen-deep/28" />
         <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-4 pb-16 pt-28 sm:px-6 sm:pb-20">
           <p className="animate-fade-up text-sm font-semibold tracking-[0.18em] text-sand/90 uppercase">
             {siteConfig.name}
@@ -148,12 +148,15 @@ export default function HomePage() {
               eyebrow="Why homeowners choose us"
               title="Personal accountability, professional results"
               description={aboutContent.mission}
+              theme="on-dark"
             />
             <ul className="mt-8 space-y-4">
               {aboutContent.values.map((value) => (
-                <li key={value.title} className="border-l-2 border-leaf pl-4">
+                <li key={value.title} className="border-l-2 border-leaf-soft pl-4">
                   <p className="font-semibold text-white">{value.title}</p>
-                  <p className="mt-1 text-sm text-sand/80">{value.description}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-sand/95">
+                    {value.description}
+                  </p>
                 </li>
               ))}
             </ul>
