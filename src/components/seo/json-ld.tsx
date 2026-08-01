@@ -22,7 +22,7 @@ export function LocalBusinessJsonLd() {
         name: "Indiana",
       },
     },
-    image: `${siteConfig.siteUrl}${imageAssets.hero}`,
+    image: `${siteConfig.siteUrl}${imageAssets.shareOg}`,
     ...(sameAs.length > 0 ? { sameAs } : {}),
   };
 

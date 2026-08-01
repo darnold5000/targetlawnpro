@@ -3,7 +3,8 @@ import { allowIndexing, siteConfig } from "@/config/site";
 
 import { imageAssets } from "@/config/assets";
 
-const defaultOgImage = imageAssets.hero;
+const defaultOgImage = imageAssets.shareOg;
+const ogImageDimensions = { width: 1200, height: 630 } as const;
 
 export function createPageMetadata({
   title,
@@ -40,7 +41,14 @@ export function createPageMetadata({
       description,
       url,
       siteName: siteConfig.name,
-      images: [{ url: image, alt: siteConfig.name }],
+      images: [
+        {
+          url: image,
+          alt: `${siteConfig.name} — lawn care in Plainfield, IN`,
+          ...ogImageDimensions,
+          type: "image/webp",
+        },
+      ],
       type: "website",
       locale: "en_US",
     },
@@ -48,7 +56,13 @@ export function createPageMetadata({
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [image],
+      images: [
+        {
+          url: image,
+          alt: `${siteConfig.name} — lawn care in Plainfield, IN`,
+          ...ogImageDimensions,
+        },
+      ],
     },
   };
 }

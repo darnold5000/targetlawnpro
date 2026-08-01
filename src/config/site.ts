@@ -1,10 +1,18 @@
+function resolveSiteUrl(): string {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (explicit) return explicit.replace(/\/$/, "");
+  const vercel = process.env.VERCEL_URL?.trim();
+  if (vercel) return `https://${vercel}`;
+  return "https://targetlawnpro.com";
+}
+
 export const siteConfig = {
   name: "Target Lawn Pro",
   legalName: "Target Lawn Pro LLC",
   tagline: "Your partner to make your lawn look its best",
   description:
     "Target Lawn Pro provides lawn care services for homeowners in Plainfield, Indiana and nearby communities.",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://targetlawnpro.com",
+  siteUrl: resolveSiteUrl(),
   phoneDisplay: "317-260-7032",
   phoneHref: "tel:3172607032",
   smsHref: "sms:3172607032",
