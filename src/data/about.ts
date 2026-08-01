@@ -1,38 +1,26 @@
 export const aboutContent = {
-  headline: "Local lawn care for Zionsville homeowners",
+  headline: "Local lawn care for Plainfield homeowners",
   intro:
-    "Weidner Lawnscape is a locally owned lawn care and landscaping company proudly serving the Zionsville community. Trusted by more than 100 homeowners, we’re dedicated to delivering reliable service, exceptional care, and results that make your outdoor spaces look their best.",
+    "Target Lawn Pro is a Plainfield-based lawn care service focused on dependable work and yards you can be proud of. We keep things straightforward — show up, communicate clearly, and leave your lawn looking its best.",
   story: [
-    "Founded by Cruz Weidner, a lifelong Zionsville resident, the company began as a passion project and has grown into a trusted local business. Cruz has called Zionsville home for 17 years and brings energy and dedication to every job.",
-    "In 2025, he was recognized as the #1 student entrepreneur in the state of Indiana for his leadership in running Weidner Lawnscape.",
-    "As a young entrepreneur with a strong commitment to quality, Cruz continues to lead his team with the same values that started it all: hard work, attention to detail, and genuine care for every customer’s lawn.",
-    "The company is backed by a skilled crew of five hardworking team members who help keep the community’s lawns looking their best.",
+    "Target Lawn Pro LLC is registered in Plainfield, Indiana and serves homeowners in the area with professional lawn care.",
+    "Our Google Business listing describes us as your partner to make your lawn look its best — that’s the standard we aim for on every property we maintain.",
+    "Because we’re a growing local operation, we keep communication direct. Tell us what you need, and we’ll confirm whether we can help and when.",
   ],
   mission:
-    "At Weidner Lawnscape, we are committed to delivering top-quality lawn care and landscape enhancements that bring your outdoor vision to life. Our team values professionalism, customer satisfaction, and attention to detail, ensuring your yard looks its absolute best.",
+    "We help Plainfield-area homeowners enjoy a healthier, better-looking lawn without the hassle — through reliable mowing, seasonal upkeep, and careful attention to the details that show.",
   values: [
     {
-      title: "Professionalism",
-      description: "Reliable crews, clear communication, and careful work on every visit.",
+      title: "Reliability",
+      description: "Consistent scheduling and clear updates so you know what to expect.",
     },
     {
-      title: "Customer satisfaction",
-      description: "We focus on results homeowners can enjoy without worrying about the yard.",
+      title: "Local focus",
+      description: "Plainfield roots and routes that keep us close to the neighborhoods we serve.",
     },
     {
-      title: "Attention to detail",
-      description: "From crisp edges to finished beds, the small things matter.",
+      title: "Careful work",
+      description: "Trimmed edges, clean finishes, and respect for your property on every visit.",
     },
   ],
-} as const;
-
-/**
- * The existing About page lists placeholder team profiles (John Weidner, Sarah Green,
- * Michael Davis, Emily Carter) that read as fabricated stock bios. Do not publish them.
- * Only Cruz Weidner is verified from the live site narrative.
- */
-export const teamNotes = {
-  verified: [{ name: "Cruz Weidner", title: "Owner" }],
-  unpublishedPlaceholders:
-    "Additional named team bios from the old site were not verified and are omitted.",
 } as const;

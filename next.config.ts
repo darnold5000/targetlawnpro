@@ -11,6 +11,8 @@ const nextConfig: NextConfig = {
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/gallery", destination: "/projects", permanent: true },
       { source: "/services/mowing", destination: "/services/lawn-mowing", permanent: true },
+      { source: "/services/design-installations", destination: "/services/landscape-care", permanent: true },
+      { source: "/services/fertilization-chemicals", destination: "/services/lawn-mowing", permanent: true },
       { source: "/privacy-policy", destination: "/privacy", permanent: true },
       { source: "/terms-and-conditions", destination: "/terms", permanent: true },
     ];

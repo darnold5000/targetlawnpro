@@ -7,9 +7,9 @@ import { services } from "@/data/services";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Lawn Care & Landscaping Services",
+  title: "Lawn Care Services",
   description:
-    "Lawn mowing, yearly maintenance, landscape design, hardscaping, and upcoming fertilization services in Zionsville.",
+    "Lawn mowing, seasonal maintenance, landscape care, and hardscaping in Plainfield, Indiana.",
   path: "/services",
 });
 

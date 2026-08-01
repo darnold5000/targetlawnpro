@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Request a Free Estimate",
   description:
-    "Request a free lawn care or landscaping estimate from Weidner Lawnscape in Zionsville.",
+    "Request a free lawn care estimate from Target Lawn Pro in Plainfield, Indiana.",
   path: "/request-estimate",
 });
 

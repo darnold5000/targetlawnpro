@@ -7,7 +7,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 export const metadata = createPageMetadata({
   title: "FAQ",
   description:
-    "Frequently asked questions about Weidner Lawnscape services, service area, and estimates.",
+    "Frequently asked questions about Target Lawn Pro services, service area, and estimates in Plainfield.",
   path: "/faq",
 });
 

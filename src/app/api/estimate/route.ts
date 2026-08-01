@@ -17,8 +17,8 @@ export const runtime = "nodejs";
 function looksOutsideServiceArea(city: string, zip: string): boolean {
   const c = city.trim().toLowerCase();
   if (!c) return true;
-  if (c.includes("zionsville")) return false;
-  // ZIP list not published on source site — flag non-Zionsville cities for review.
+  if (c.includes("plainfield")) return false;
+  // ZIP list not published — flag non-Plainfield cities for review.
   void zip;
   return true;
 }

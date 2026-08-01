@@ -16,7 +16,7 @@ export async function POST() {
     {
       ok: false,
       error:
-        "This account is not set up for Weidner Lawnscape staff access. Ask an owner to add a weidner_staff_profiles row for this tenant.",
+        "This account is not set up for Target Lawn Pro staff access. Ask an owner to add a weidner_staff_profiles row for this tenant.",
       reason: access.reason,
     },
     { status: 403 },

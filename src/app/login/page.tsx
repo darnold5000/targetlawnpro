@@ -36,7 +36,7 @@ export default function LoginPage() {
         await supabase.auth.signOut();
         throw new Error(
           json.error ||
-            "This account is not provisioned for Weidner Lawnscape staff access.",
+            "This account is not provisioned for Target Lawn Pro staff access.",
         );
       }
       router.replace("/admin");

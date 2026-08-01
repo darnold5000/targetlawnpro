@@ -1,14 +1,15 @@
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Section, SectionHeading } from "@/components/ui/section";
+import { imageAssets } from "@/config/assets";
 import { aboutContent } from "@/data/about";
 import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "About Weidner Lawnscape",
+  title: `About ${siteConfig.name}`,
   description:
-    "Locally owned lawn care and landscaping in Zionsville, founded by Cruz Weidner and trusted by more than 100 homeowners.",
+    "Plainfield-based lawn care from Target Lawn Pro — reliable mowing, seasonal maintenance, and landscape services.",
   path: "/about",
 });
 
@@ -31,8 +32,8 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
             <Image
-              src="/images/weidner/services/about.webp"
-              alt="Outdoor landscaping maintained by Weidner Lawnscape"
+              src={imageAssets.about}
+              alt="Outdoor lawn care maintained by Target Lawn Pro"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -57,15 +58,11 @@ export default function AboutPage() {
       </Section>
       <Section>
         <SectionHeading
-          title="Leadership"
-          description={`${siteConfig.owner.name}, ${siteConfig.owner.title} — locally rooted in Zionsville.`}
+          title="Work with a local crew"
+          description="Request an estimate to discuss mowing, seasonal maintenance, or landscape projects for your Plainfield-area property."
         />
-        <p className="mt-4 max-w-2xl text-sm text-muted">
-          Additional named team profiles from the previous website were not independently
-          verified and are intentionally omitted here.
-        </p>
         <ButtonLink href="/request-estimate" className="mt-8">
-          Work with our team
+          Request an estimate
         </ButtonLink>
       </Section>
     </>

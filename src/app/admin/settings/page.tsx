@@ -16,7 +16,7 @@ export default function AdminSettingsPage() {
         </div>
         <div>
           <dt className="font-medium text-evergreen">Email</dt>
-          <dd className="text-muted">{siteConfig.email}</dd>
+          <dd className="text-muted">{siteConfig.email || "Not set — use phone or estimate form"}</dd>
         </div>
         <div>
           <dt className="font-medium text-evergreen">Service area</dt>

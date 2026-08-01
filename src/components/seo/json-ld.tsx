@@ -1,6 +1,11 @@
+import { imageAssets } from "@/config/assets";
 import { siteConfig } from "@/config/site";
 
 export function LocalBusinessJsonLd() {
+  const sameAs = [siteConfig.social.instagram, siteConfig.social.googleMaps].filter(
+    (url): url is string => Boolean(url),
+  );
+
   const data = {
     "@context": "https://schema.org",
     "@type": "LawnCareService",
@@ -8,7 +13,7 @@ export function LocalBusinessJsonLd() {
     description: siteConfig.description,
     url: siteConfig.siteUrl,
     telephone: siteConfig.phoneDisplay,
-    email: siteConfig.email,
+    ...(siteConfig.email ? { email: siteConfig.email } : {}),
     areaServed: {
       "@type": "City",
       name: siteConfig.serviceArea.primary,
@@ -17,8 +22,8 @@ export function LocalBusinessJsonLd() {
         name: "Indiana",
       },
     },
-    image: `${siteConfig.siteUrl}/images/weidner/hero/hero-main.webp`,
-    sameAs: [siteConfig.social.instagram],
+    image: `${siteConfig.siteUrl}${imageAssets.hero}`,
+    ...(sameAs.length > 0 ? { sameAs } : {}),
   };
 
   return (

@@ -1,3 +1,5 @@
+import { siteConfig } from "@/config/site";
+
 export type FaqItem = {
   question: string;
   answer: string;
@@ -6,32 +8,29 @@ export type FaqItem = {
 export const faqs: FaqItem[] = [
   {
     question: "What areas do you serve?",
-    answer:
-      "Weidner Lawnscape primarily serves Zionsville and surrounding areas. If you’re nearby, submit an estimate request and we’ll confirm whether we can serve your address.",
+    answer: `Target Lawn Pro is based in Plainfield and serves Plainfield and surrounding areas. Submit an estimate request and we’ll confirm whether we can serve your address.`,
   },
   {
     question: "How do I request an estimate?",
-    answer:
-      "Use the Request a Free Estimate form on this site, or call/text 317-205-6256. Include your address, the services you’re interested in, and any photos of the property if helpful.",
+    answer: `Use the Request a Free Estimate form on this site, or call/text ${siteConfig.phoneDisplay}. Include your address, the services you’re interested in, and any helpful photos of the property.`,
   },
   {
     question: "What services do you offer?",
     answer:
-      "We offer lawn mowing, yearly maintenance (including seasonal cleanups, mulch, aeration, overseeding, and leaf removal), landscape design and installations, and hardscaping. Fertilization and weed control is planned to launch in 2026.",
+      "We offer lawn mowing, seasonal maintenance, landscape care, and hardscaping. Tell us what you need on the estimate form and we’ll confirm scope and availability.",
   },
   {
     question: "How quickly will you respond?",
-    answer:
-      "We typically respond to estimate requests within one business day.",
+    answer: siteConfig.responseTime,
   },
   {
     question: "Do you offer weekly mowing?",
     answer:
-      "Yes. Weekly mowing includes mowing, trimming, edging, and debris cleanup so your yard stays consistent all season.",
+      "Yes. Weekly mowing can include mowing, trimming, edging, and cleanup so your yard stays consistent through the season.",
   },
   {
-    question: "Who owns Weidner Lawnscape?",
+    question: "What are your hours?",
     answer:
-      "Weidner Lawnscape is locally owned by Cruz Weidner, a lifelong Zionsville resident, and supported by a hardworking local crew.",
+      "Our Google listing shows we open at 9 AM on Mondays. Other days are by appointment — call or request an estimate to schedule.",
   },
 ];

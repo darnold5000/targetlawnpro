@@ -1,3 +1,8 @@
+import { imageAssets } from "@/config/assets";
+
+const brand = "Target Lawn Pro";
+const area = "Plainfield";
+
 export type Service = {
   slug: string;
   name: string;
@@ -20,14 +25,14 @@ export const services: Service[] = [
     slug: "lawn-mowing",
     name: "Lawn Mowing",
     shortSummary:
-      "Reliable weekly lawn mowing in Zionsville that keeps your grass healthy, trimmed, and looking sharp all season long.",
+      "Reliable lawn mowing in Plainfield that keeps your grass trimmed, neat, and healthy through the season.",
     description:
-      "Looking for reliable and professional lawn mowing in Zionsville? At Weidner Lawnscape, we provide consistent, high-quality mowing services that keep your yard looking healthy, clean, and beautifully maintained. Our local team knows what Zionsville lawns need to thrive — and we deliver dependable care week after week.",
+      `Looking for dependable lawn mowing in ${area}? ${brand} provides consistent mowing, trimming, edging, and cleanup so your yard stays sharp week after week.`,
     benefits: [
-      "Local experts with lawn care experience in Zionsville",
-      "Reliable weekly scheduling you can trust",
-      "Professional equipment for a consistent, clean cut",
-      "Dedicated to keeping your yard looking its best all season long",
+      "Local crew serving Plainfield and nearby neighborhoods",
+      "Reliable scheduling you can count on",
+      "Professional equipment for a clean, even cut",
+      "Trimming and edging for a finished look",
     ],
     process: [
       "Tell us about your property and preferred schedule",
@@ -37,217 +42,149 @@ export const services: Service[] = [
     includes: [
       {
         title: "Mowing",
-        description:
-          "Even, professional cuts that encourage thicker and greener grass.",
+        description: "Even cuts that keep your turf looking healthy and uniform.",
       },
       {
         title: "Trimming",
-        description:
-          "Careful detail work around trees, fences, flower beds, and other edges.",
+        description: "Detail work around beds, fences, trees, and other obstacles.",
       },
       {
         title: "Edging",
-        description:
-          "Crisp lines along sidewalks, driveways, and walkways for a polished finish.",
+        description: "Crisp lines along sidewalks, driveways, and walkways.",
       },
       {
-        title: "Debris Cleanup",
-        description:
-          "Complete blowing of grass clippings and debris to leave your yard spotless.",
+        title: "Cleanup",
+        description: "Blowing clippings and debris so the yard is ready to enjoy.",
       },
     ],
-    image: "/images/weidner/services/mowing.webp",
+    image: imageAssets.services.mowing,
     imageAlt: "Freshly mowed residential lawn",
     status: "active",
-    seoTitle: "Lawn Mowing in Zionsville | Weidner Lawnscape",
-    seoDescription:
-      "Weekly lawn mowing, trimming, edging, and cleanup for homeowners in Zionsville and surrounding areas.",
-    relatedSlugs: ["yearly-maintenance", "fertilization-chemicals"],
+    seoTitle: `Lawn Mowing in ${area} | ${brand}`,
+    seoDescription: `Weekly lawn mowing, trimming, edging, and cleanup for homeowners in ${area} and nearby areas.`,
+    relatedSlugs: ["yearly-maintenance", "landscape-care"],
   },
   {
     slug: "yearly-maintenance",
-    name: "Yearly Maintenance",
+    name: "Seasonal Maintenance",
     shortSummary:
-      "Seasonal cleanups, mulch, aeration, overseeding, and fall leaf removal — everything your yard needs year-round.",
+      "Spring and fall cleanups, mulch, aeration, overseeding, and leaf removal to keep your yard on track year-round.",
     description:
-      "Keeping your yard looking its best year-round takes consistent care. At Weidner Lawnscape, we provide professional yearly maintenance services in Zionsville to keep your lawn and landscape healthy, tidy, and beautiful in every season. From spring cleanups to fall leaf removal, we make sure your outdoor space is always ready to enjoy.",
+      `${brand} helps ${area} homeowners stay ahead of seasonal yard work — from spring bed cleanups to fall leaf removal — so your landscape stays tidy in every season.`,
     benefits: [
-      "Full-service care designed for every season",
-      "Reliable, on-time scheduling to keep your yard in top shape",
-      "Local expertise and knowledge of Zionsville landscapes",
-      "Professional team focused on quality and attention to detail",
+      "Seasonal visits planned around Indiana weather",
+      "One team for mowing and seasonal touch-ups",
+      "Local knowledge of Plainfield-area properties",
+      "Clear communication before each visit",
     ],
     process: [
       "Share your seasonal priorities and property details",
       "We recommend a maintenance plan for the year",
-      "Seasonal visits keep beds, lawn, and leaves under control",
+      "Scheduled visits keep beds, lawn, and leaves under control",
     ],
     includes: [
       {
-        title: "Spring Clean-Up",
-        description:
-          "Clearing out garden beds, trimming and pruning shrubs, and preparing your landscape for the season ahead.",
+        title: "Spring clean-up",
+        description: "Bed clearing, shrub touch-ups, and prep for the growing season.",
       },
       {
-        title: "Mulch Installation",
-        description:
-          "Fresh mulch in spring or summer to enhance curb appeal, improve soil health, and make your landscape shine.",
+        title: "Mulch installation",
+        description: "Fresh mulch to tidy beds and support plant health.",
       },
       {
-        title: "Seasonal Maintenance",
-        description:
-          "Regular weeding, edging garden beds, and tidying your yard to keep it looking polished all season long.",
+        title: "Seasonal bed care",
+        description: "Weeding, edging beds, and keeping the landscape polished.",
       },
       {
-        title: "Core Aeration & Overseeding",
-        description:
-          "Revitalize your lawn in the fall by filling in bare spots and strengthening turf for thicker, healthier grass.",
+        title: "Aeration & overseeding",
+        description: "Fall lawn revitalization when your turf needs it most.",
       },
       {
-        title: "Fall Leaf Clean-Up",
-        description:
-          "Collecting and moving leaves to the curb for town pick-up, along with final touches to wrap up your landscape for the year.",
+        title: "Fall leaf clean-up",
+        description: "Leaf removal and final seasonal tidy-up.",
       },
     ],
-    image: "/images/weidner/services/maintenance.webp",
+    image: imageAssets.services.maintenance,
     imageAlt: "Seasonal landscape maintenance work",
     status: "active",
-    seoTitle: "Yearly Landscape Maintenance in Zionsville | Weidner Lawnscape",
-    seoDescription:
-      "Spring cleanup, mulch, aeration, overseeding, and fall leaf removal for Zionsville homeowners.",
-    relatedSlugs: ["lawn-mowing", "design-installations"],
+    seoTitle: `Seasonal Yard Maintenance in ${area} | ${brand}`,
+    seoDescription: `Spring cleanup, mulch, aeration, overseeding, and fall leaf removal in ${area}.`,
+    relatedSlugs: ["lawn-mowing", "landscape-care"],
   },
   {
-    slug: "design-installations",
-    name: "Design & Installations",
+    slug: "landscape-care",
+    name: "Landscape Care",
     shortSummary:
-      "Professional landscape design, planting, mulch, and lighting that bring your outdoor vision to life.",
+      "Planting, mulch, bed refreshes, and landscape improvements — ask what we can handle for your property.",
     description:
-      "Ready to bring new life to your yard with a custom landscape design? At Weidner Lawnscape, we specialize in professional landscape design and installations in Zionsville that transform ordinary yards into beautiful, functional outdoor spaces. Whether you’re starting from scratch or refreshing an existing landscape, our team will create a design that fits your property, style, and lifestyle.",
+      `Need more than mowing? ${brand} can discuss landscape planting, mulch, bed refreshes, and other outdoor improvements for ${area} homes. Scope and timing are confirmed during your estimate.`,
     benefits: [
-      "Locally owned with deep knowledge of Zionsville landscapes",
-      "Custom designs tailored to your property and preferences",
-      "Professional installations that boost curb appeal and property value",
-      "A detail-oriented team dedicated to bringing your vision to life",
+      "Practical upgrades that improve curb appeal",
+      "Work planned around your budget and priorities",
+      "Same local crew you already trust for mowing",
+      "Straight answers about what we can take on",
     ],
     process: [
-      "Consultation to understand your style and goals",
-      "Design and material recommendations for your property",
-      "Professional installation with finishing details",
+      "Walk through your goals and property layout",
+      "We outline materials, scope, and timing",
+      "Installation and finishing with attention to detail",
     ],
     includes: [
       {
-        title: "Landscape Layout & Design",
-        description:
-          "Thoughtful planning to create a balanced, eye-catching outdoor space.",
+        title: "Bed & planting work",
+        description: "Shrubs, perennials, and bed refreshes where appropriate.",
       },
       {
-        title: "Planting Shrubs and Perennials",
-        description: "Add color, texture, and year-round beauty to your yard.",
+        title: "Mulch & edging",
+        description: "Clean bed lines and fresh mulch for a finished look.",
       },
       {
-        title: "Mulch Installation",
-        description:
-          "Enhance curb appeal while protecting and nourishing your plants.",
-      },
-      {
-        title: "Landscape Lighting",
-        description:
-          "Highlight key features, improve safety, and enjoy your outdoor space at night.",
-      },
-      {
-        title: "Larger Projects",
-        description:
-          "From complete outdoor makeovers to custom features, we handle it all.",
+        title: "Property-specific projects",
+        description: "Larger improvements quoted individually after a site review.",
       },
     ],
-    image: "/images/weidner/services/design.webp",
-    imageAlt: "Landscape planting and design work",
+    image: imageAssets.services.design,
+    imageAlt: "Landscape planting and bed care",
     status: "active",
-    seoTitle: "Landscape Design & Installation in Zionsville | Weidner Lawnscape",
-    seoDescription:
-      "Custom landscape design, planting, mulch, and lighting for Zionsville homes.",
-    relatedSlugs: ["hardscaping", "yearly-maintenance"],
+    seoTitle: `Landscape Care in ${area} | ${brand}`,
+    seoDescription: `Landscape planting, mulch, and bed care for homeowners in ${area}.`,
+    relatedSlugs: ["yearly-maintenance", "lawn-mowing"],
   },
   {
     slug: "hardscaping",
     name: "Hardscaping",
     shortSummary:
-      "Custom patios, walkways, and retaining walls that add beauty, function, and value outdoors.",
+      "Patios, walkways, and retaining walls — contact us to discuss availability for your project.",
     description:
-      "Looking to upgrade your outdoor living space with professional hardscaping in Zionsville? At Weidner Lawnscape, we design and build custom hardscapes that are as durable as they are beautiful. From patios and walkways to retaining walls and more, our team creates outdoor features that add style, function, and long-lasting value to your property.",
+      `For paver patios, walkways, retaining walls, and similar outdoor features, contact ${brand} to discuss whether we can take on your ${area} project and provide a custom quote.`,
     benefits: [
-      "Expert craftsmanship and attention to detail",
-      "Locally owned and operated with a focus on the Zionsville community",
-      "Custom designs that match your lifestyle and property",
-      "A professional, dependable team dedicated to customer satisfaction",
+      "Custom outdoor features tailored to your space",
+      "Durable materials and careful installation",
+      "Local Plainfield-area service",
+      "Honest scope review before work begins",
     ],
     process: [
       "Discuss how you want to use your outdoor space",
       "We plan materials, layout, and scope",
-      "Build and finish durable hardscape features",
+      "Build and finish hardscape features to spec",
     ],
     includes: [
+      { title: "Paver patios", description: "Outdoor living and entertaining spaces." },
       {
-        title: "Paver Patios",
-        description: "Perfect for outdoor dining, entertaining, and relaxing.",
+        title: "Walkways",
+        description: "Paths that connect your home’s outdoor areas.",
       },
       {
-        title: "Paver Walkways",
-        description:
-          "Elegant paths that improve curb appeal and connect your outdoor spaces.",
-      },
-      {
-        title: "Retaining Walls",
-        description:
-          "Built to last while adding structure, beauty, and functionality.",
-      },
-      {
-        title: "Additional Features",
-        description:
-          "Fire pits, outdoor living spaces, and other features tailored to your vision.",
+        title: "Retaining walls",
+        description: "Functional structure with a clean finished look.",
       },
     ],
-    image: "/images/weidner/services/hardscape.webp",
+    image: imageAssets.services.hardscape,
     imageAlt: "Hardscaping patio and outdoor living space",
     status: "active",
-    seoTitle: "Hardscaping in Zionsville | Weidner Lawnscape",
-    seoDescription:
-      "Paver patios, walkways, retaining walls, and outdoor living features in Zionsville.",
-    relatedSlugs: ["design-installations", "yearly-maintenance"],
-  },
-  {
-    slug: "fertilization-chemicals",
-    name: "Fertilization & Weed Control",
-    shortSummary:
-      "A six-step lawn fertilization and weed control program for a lush, green yard — launching in 2026.",
-    description:
-      "Our six-step lawn fertilization and weed control program is designed to deliver a lush, green yard in Zionsville. This service is launching in 2026. Request an estimate today if you’d like to be contacted when enrollment opens.",
-    benefits: [
-      "Program designed for healthier, greener turf",
-      "Local care focused on Zionsville lawns",
-      "Ask to be notified when the 2026 program opens",
-    ],
-    process: [
-      "Share your lawn goals and property details",
-      "We’ll note your interest for the 2026 program launch",
-      "We’ll follow up when fertilization service enrollment opens",
-    ],
-    includes: [
-      {
-        title: "Six-Step Program",
-        description:
-          "A planned fertilization and weed control schedule for the growing season (details confirmed at launch).",
-      },
-    ],
-    image: "/images/weidner/services/maintenance.webp",
-    imageAlt: "Healthy green lawn ready for fertilization program",
-    status: "coming_soon",
-    statusNote: "Launching 2026",
-    seoTitle: "Lawn Fertilization Coming 2026 | Weidner Lawnscape",
-    seoDescription:
-      "Weidner Lawnscape’s six-step fertilization and weed control program for Zionsville lawns launches in 2026.",
-    relatedSlugs: ["lawn-mowing", "yearly-maintenance"],
+    seoTitle: `Hardscaping in ${area} | ${brand}`,
+    seoDescription: `Paver patios, walkways, and retaining walls in ${area} — contact for a project quote.`,
+    relatedSlugs: ["landscape-care", "yearly-maintenance"],
   },
 ];
 

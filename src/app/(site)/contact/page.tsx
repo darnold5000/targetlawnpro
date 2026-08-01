@@ -8,7 +8,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 export const metadata = createPageMetadata({
   title: "Contact",
   description:
-    "Contact Weidner Lawnscape for lawn care and landscaping in Zionsville. Call, text, email, or send a message.",
+    "Contact Target Lawn Pro for lawn care in Plainfield. Call, text, or send a message.",
   path: "/contact",
 });
 
@@ -35,16 +35,18 @@ export default function ContactPage() {
                 <p className="mt-1 text-muted">{siteConfig.phoneDisplay}</p>
               </div>
             </a>
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="flex items-start gap-3 rounded-xl border border-border bg-surface p-5 hover:bg-leaf-soft"
-            >
-              <Mail className="mt-0.5 size-5 text-leaf" aria-hidden />
-              <div>
-                <p className="font-semibold text-evergreen">Email</p>
-                <p className="mt-1 break-all text-muted">{siteConfig.email}</p>
-              </div>
-            </a>
+            {siteConfig.email ? (
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="flex items-start gap-3 rounded-xl border border-border bg-surface p-5 hover:bg-leaf-soft"
+              >
+                <Mail className="mt-0.5 size-5 text-leaf" aria-hidden />
+                <div>
+                  <p className="font-semibold text-evergreen">Email</p>
+                  <p className="mt-1 break-all text-muted">{siteConfig.email}</p>
+                </div>
+              </a>
+            ) : null}
             <div className="flex items-start gap-3 rounded-xl border border-border bg-surface p-5">
               <MapPin className="mt-0.5 size-5 text-leaf" aria-hidden />
               <div>

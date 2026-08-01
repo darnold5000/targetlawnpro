@@ -1,6 +1,8 @@
-# Weidner Lawnscape
+# Target Lawn Pro
 
-Marketing website and lightweight operations portal for [Weidner Lawnscape](https://weidnerlawnscape.com) — lawn care and landscaping in Zionsville, Indiana.
+Marketing website and lightweight operations portal for **Target Lawn Pro** — lawn care in Plainfield, Indiana.
+
+> Repo folder is still `weidner-lawnscape`; Supabase tenant slug and `weidner_*` tables are unchanged (see `docs/CONTENT_NOTES.md`).
 
 Built on the Signal Works stack: Next.js App Router, Tailwind, shared Supabase Auth/DB, Resend.
 

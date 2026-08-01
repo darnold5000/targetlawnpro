@@ -1,8 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import { navLinks, siteConfig } from "@/config/site";
 import { getActiveServices } from "@/data/services";
+import Image from "next/image";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -12,13 +13,9 @@ export function SiteFooter() {
     <footer className="border-t border-evergreen/20 bg-evergreen-deep text-sand">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
-          <Image
-            src="/images/weidner/logo/logo-full.webp"
-            alt={siteConfig.name}
-            width={200}
-            height={72}
-            className="h-11 w-auto rounded-sm"
-          />
+          <Link href="/">
+            <BrandLogo variant="on-dark" />
+          </Link>
           <p className="max-w-sm text-sm leading-relaxed text-sand/80">
             {siteConfig.description}
           </p>
@@ -76,28 +73,35 @@ export function SiteFooter() {
                 {siteConfig.phoneDisplay}
               </a>
             </li>
-            <li className="flex gap-2">
-              <Mail className="size-4 shrink-0" aria-hidden />
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="break-all hover:text-white"
-              >
-                {siteConfig.email}
-              </a>
-            </li>
-            <li className="flex gap-2">
-              <span className="mt-0.5 size-4 shrink-0 text-center text-xs font-bold" aria-hidden>
-                IG
-              </span>
-              <a
-                href={siteConfig.social.instagram}
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-white"
-              >
-                @weidnerls
-              </a>
-            </li>
+            {siteConfig.email ? (
+              <li className="flex gap-2">
+                <Mail className="size-4 shrink-0" aria-hidden />
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="break-all hover:text-white"
+                >
+                  {siteConfig.email}
+                </a>
+              </li>
+            ) : null}
+            {siteConfig.social.instagram ? (
+              <li className="flex gap-2">
+                <span
+                  className="mt-0.5 size-4 shrink-0 text-center text-xs font-bold"
+                  aria-hidden
+                >
+                  IG
+                </span>
+                <a
+                  href={siteConfig.social.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white"
+                >
+                  Instagram
+                </a>
+              </li>
+            ) : null}
           </ul>
         </div>
       </div>

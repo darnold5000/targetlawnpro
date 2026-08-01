@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { allowIndexing, siteConfig } from "@/config/site";
 
-const defaultOgImage = "/images/weidner/hero/hero-main.webp";
+import { imageAssets } from "@/config/assets";
+
+const defaultOgImage = imageAssets.hero;
 
 export function createPageMetadata({
   title,

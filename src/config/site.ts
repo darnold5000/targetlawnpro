@@ -1,40 +1,44 @@
 export const siteConfig = {
-  name: "Weidner Lawnscape",
-  legalName: "Weidner Lawnscape LLC",
-  tagline: "Lawn care & landscaping for Zionsville homeowners",
+  name: "Target Lawn Pro",
+  legalName: "Target Lawn Pro LLC",
+  tagline: "Your partner to make your lawn look its best",
   description:
-    "Reliable lawn mowing, yearly maintenance, landscape design, and hardscaping for homeowners in Zionsville and surrounding areas.",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://weidnerlawnscape.com",
-  phoneDisplay: "317-205-6256",
-  phoneHref: "tel:3172056256",
-  smsHref: "sms:3172056256",
-  email: "weidnerlawnscapellc@gmail.com",
+    "Target Lawn Pro provides lawn care services for homeowners in Plainfield, Indiana and nearby communities.",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://targetlawnpro.com",
+  phoneDisplay: "317-260-7032",
+  phoneHref: "tel:3172607032",
+  smsHref: "sms:3172607032",
+  /** Not listed on the public Google Business Profile — contact via phone or form. */
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() ?? "",
   serviceArea: {
-    primary: "Zionsville",
-    summary: "Zionsville & surrounding areas",
-    cities: ["Zionsville"] as string[],
-    note: "We primarily serve Zionsville and nearby communities. Request an estimate and we will confirm availability for your address.",
+    primary: "Plainfield",
+    summary: "Plainfield & surrounding areas",
+    cities: ["Plainfield"] as string[],
+    note: "We are based in Plainfield and serve nearby Hendricks County communities. Request an estimate and we will confirm availability for your address.",
   },
   address: {
-    // No public street address listed on the existing site — service-area based.
-    city: "Zionsville",
+    city: "Plainfield",
     state: "IN",
     region: "Indiana",
+    zip: "46168",
   },
   social: {
-    instagram: "https://www.instagram.com/weidnerls/",
+    googleMaps: null as string | null,
+    instagram: null as string | null,
   },
-  owner: {
-    name: "Cruz Weidner",
-    title: "Owner",
+  googleBusiness: {
+    rating: 5.0,
+    reviewCount: 1,
+    ownerQuote:
+      "Target Lawn Pro is your partner to make your lawn look its best!",
   },
   hours: [
     {
       days: "Monday–Friday",
-      hours: "By appointment",
+      hours: "Opens 9 AM",
     },
     {
-      days: "Saturday",
+      days: "Saturday–Sunday",
       hours: "By appointment",
     },
   ],

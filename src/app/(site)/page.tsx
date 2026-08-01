@@ -1,18 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, MapPin, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin, Phone, Star } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Section, SectionHeading } from "@/components/ui/section";
+import { imageAssets } from "@/config/assets";
 import { siteConfig } from "@/config/site";
 import { aboutContent } from "@/data/about";
 import { faqs } from "@/data/faqs";
 import { featuredGallery } from "@/data/gallery";
-import { reviews } from "@/data/reviews";
 import { getActiveServices } from "@/data/services";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: `${siteConfig.name} | Lawn Care & Landscaping in Zionsville`,
+  title: `${siteConfig.name} | Lawn Care in Plainfield, IN`,
   description: siteConfig.description,
   path: "/",
 });
@@ -21,29 +21,30 @@ const processSteps = [
   {
     title: "Consultation",
     description:
-      "We begin with a thorough consultation to understand your lawn care and landscaping needs.",
+      "Tell us about your lawn, schedule, and what you want improved on the property.",
   },
   {
-    title: "Implementation",
+    title: "Service plan",
     description:
-      "Our skilled team implements the agreed-upon services with precision and care.",
+      "We confirm scope, timing, and pricing so you know exactly what to expect.",
   },
   {
-    title: "Satisfaction",
+    title: "Results",
     description:
-      "We ensure your complete satisfaction with our work, leaving your lawn looking its best.",
+      "Our crew handles the work and leaves your yard looking its best.",
   },
 ];
 
 export default function HomePage() {
   const services = getActiveServices();
+  const { googleBusiness } = siteConfig;
 
   return (
     <>
       <section className="relative min-h-[88vh] overflow-hidden bg-evergreen-deep text-white">
         <Image
-          src="/images/weidner/hero/hero-main.webp"
-          alt="Weidner Lawnscape crew maintaining a residential lawn"
+          src={imageAssets.hero}
+          alt="Target Lawn Pro maintaining a residential lawn"
           fill
           priority
           className="object-cover object-[50%_48%] brightness-[1.1] sm:object-[50%_44%]"
@@ -55,11 +56,11 @@ export default function HomePage() {
             {siteConfig.name}
           </p>
           <h1 className="animate-fade-up-delay mt-4 max-w-3xl font-display text-4xl leading-[1.08] sm:text-5xl lg:text-6xl">
-            Reliable lawn care and landscaping for Zionsville homeowners
+            Lawn care in Plainfield you can count on
           </h1>
           <p className="animate-fade-up-delay-2 mt-5 max-w-xl text-base leading-relaxed text-sand/90 sm:text-lg">
-            Weekly mowing, seasonal maintenance, landscape installs, and hardscaping
-            from a local crew you can count on.
+            {siteConfig.tagline}. Weekly mowing, seasonal maintenance, and landscape
+            care from a local Plainfield crew.
           </p>
           <div className="animate-fade-up-delay-2 mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <ButtonLink href="/request-estimate" className="bg-accent hover:bg-accent-hover">
@@ -84,8 +85,8 @@ export default function HomePage() {
       <Section className="bg-surface py-10 sm:py-12">
         <div className="grid gap-6 sm:grid-cols-3">
           {[
-            "Trusted by 100+ homeowners",
-            "Local Zionsville-owned crew",
+            `${googleBusiness.rating.toFixed(1)}★ on Google`,
+            "Plainfield-based lawn care",
             "Clear communication every step",
           ].map((item) => (
             <div key={item} className="flex items-start gap-3">
@@ -99,8 +100,8 @@ export default function HomePage() {
       <Section>
         <SectionHeading
           eyebrow="Services"
-          title="Lawn care and landscaping built for local homes"
-          description="Practical services for curb appeal, weekly upkeep, and outdoor living — without the runaround."
+          title="Lawn care built for local homes"
+          description="Practical services for weekly upkeep, seasonal yard work, and outdoor improvements."
         />
         <div className="mt-10 grid gap-8 sm:grid-cols-2">
           {services.map((service) => (
@@ -132,13 +133,6 @@ export default function HomePage() {
             </article>
           ))}
         </div>
-        <p className="mt-8 text-sm text-muted">
-          Fertilization &amp; weed control launches in 2026.{" "}
-          <Link href="/services/fertilization-chemicals" className="font-medium text-leaf underline-offset-2 hover:underline">
-            Get details
-          </Link>
-          .
-        </p>
       </Section>
 
       <Section className="bg-evergreen text-sand">
@@ -146,7 +140,7 @@ export default function HomePage() {
           <div>
             <SectionHeading
               eyebrow="Why homeowners choose us"
-              title="Personal accountability, professional results"
+              title="Local service, professional results"
               description={aboutContent.mission}
               theme="on-dark"
             />
@@ -163,8 +157,8 @@ export default function HomePage() {
           </div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
             <Image
-              src="/images/weidner/services/about.webp"
-              alt="Finished landscaping and lawn care work"
+              src={imageAssets.about}
+              alt="Finished lawn and landscape care"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -177,8 +171,8 @@ export default function HomePage() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
             eyebrow="Projects"
-            title="Recent work from local properties"
-            description="Real photos from Weidner Lawnscape jobs — the kind of results neighbors notice."
+            title="Lawn and landscape work"
+            description="Project photos will be updated from the Target Lawn Pro Google listing — gallery placeholders are shown for now."
           />
           <ButtonLink href="/projects" variant="secondary">
             View gallery
@@ -225,28 +219,32 @@ export default function HomePage() {
       <Section>
         <SectionHeading
           eyebrow="Reviews"
-          title="What homeowners say"
-          description="Verified testimonials from the Weidner Lawnscape website."
+          title="What customers are saying"
+          description="Public Google Business rating for Target Lawn Pro."
         />
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {reviews.map((review) => (
-            <blockquote
-              key={review.id}
-              className="border-t-4 border-leaf bg-surface p-6 shadow-[0_1px_0_rgba(28,36,28,0.06)]"
-            >
-              <p className="text-base leading-relaxed text-foreground">
-                “{review.body}”
-              </p>
-              <footer className="mt-5 text-sm">
-                <p className="font-semibold text-evergreen">{review.name}</p>
-                <p className="text-muted">{review.locationLabel}</p>
-              </footer>
-            </blockquote>
-          ))}
+        <div className="mt-10 max-w-2xl rounded-xl border border-border bg-surface p-8">
+          <div className="flex items-center gap-2 text-evergreen">
+            {Array.from({ length: 5 }).map((_, index) => (
+              <Star key={index} className="size-5 fill-accent text-accent" aria-hidden />
+            ))}
+            <span className="ml-2 font-display text-2xl">
+              {googleBusiness.rating.toFixed(1)}
+            </span>
+            <span className="text-sm text-muted">
+              ({googleBusiness.reviewCount} Google review
+              {googleBusiness.reviewCount === 1 ? "" : "s"})
+            </span>
+          </div>
+          <blockquote className="mt-6 border-l-4 border-leaf pl-4">
+            <p className="text-base leading-relaxed text-foreground">
+              “{googleBusiness.ownerQuote}”
+            </p>
+            <footer className="mt-3 text-sm text-muted">From Target Lawn Pro on Google</footer>
+          </blockquote>
         </div>
         <div className="mt-8">
           <ButtonLink href="/reviews" variant="ghost">
-            Read more reviews
+            Reviews details
           </ButtonLink>
         </div>
       </Section>
@@ -259,7 +257,7 @@ export default function HomePage() {
             description={siteConfig.serviceArea.note}
           />
           <div className="rounded-xl border border-border bg-surface p-6">
-            <p className="font-display text-2xl text-evergreen-deep">Zionsville, IN</p>
+            <p className="font-display text-2xl text-evergreen-deep">Plainfield, IN</p>
             <p className="mt-2 text-sm text-muted">
               Nearby addresses are reviewed manually — we won’t silently reject your request.
             </p>

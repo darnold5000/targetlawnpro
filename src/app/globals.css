@@ -12,8 +12,9 @@
   --leaf-soft: #e7efe6;
   --stone: #8a8072;
   --sand: #ebe4d6;
-  --accent: #c45c26;
-  --accent-hover: #a84b1d;
+  --accent: #c7342d;
+  --accent-hover: #a82b25;
+  --target-red: #c7342d;
   --focus: #2f6fed;
 }
 
@@ -31,6 +32,7 @@
   --color-sand: var(--sand);
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
+  --color-target-red: var(--target-red);
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
 }

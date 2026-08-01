@@ -8,6 +8,24 @@ function getResend() {
   return new Resend(key);
 }
 
+function replyToAddress(): string | undefined {
+  const business = siteConfig.email?.trim();
+  if (business) return business;
+  return process.env.ADMIN_NOTIFY_EMAIL?.trim() || undefined;
+}
+
+function contactLinesHtml(): string {
+  const lines = [
+    `Call or text: <a href="${siteConfig.phoneHref}">${siteConfig.phoneDisplay}</a>`,
+  ];
+  if (siteConfig.email) {
+    lines.push(
+      `Email: <a href="mailto:${siteConfig.email}">${escapeHtml(siteConfig.email)}</a>`,
+    );
+  }
+  return lines.join("<br/>");
+}
+
 function fromAddress() {
   const email =
     process.env.EMAIL_FROM?.trim() ||
@@ -37,10 +55,7 @@ export async function sendLeadConfirmationEmail(input: {
         input.serviceType ? ` for <strong>${escapeHtml(input.serviceType)}</strong>` : ""
       } and will follow up soon.</p>
       <p>${escapeHtml(siteConfig.responseTime)}</p>
-      <p>
-        Call or text: <a href="${siteConfig.phoneHref}">${siteConfig.phoneDisplay}</a><br/>
-        Email: <a href="mailto:${siteConfig.email}">${siteConfig.email}</a>
-      </p>
+      <p>${contactLinesHtml()}</p>
       <p style="color:#5a6358;font-size:13px">${escapeHtml(siteConfig.serviceArea.summary)}</p>
     </div>
   `;
@@ -50,7 +65,7 @@ export async function sendLeadConfirmationEmail(input: {
     to: input.to,
     subject,
     html,
-    replyTo: siteConfig.email,
+    ...(replyToAddress() ? { replyTo: replyToAddress() } : {}),
   });
 
   if (error) {
@@ -73,8 +88,8 @@ export async function sendAdminLeadAlertEmail(input: {
   const resend = getResend();
   const notify =
     process.env.ADMIN_NOTIFY_EMAIL?.trim() || siteConfig.email;
-  if (!resend) {
-    console.info("[email] RESEND_API_KEY missing — skipped admin alert");
+  if (!resend || !notify) {
+    console.info("[email] RESEND_API_KEY or ADMIN_NOTIFY_EMAIL missing — skipped admin alert");
     return { ok: false as const, skipped: true };
   }
 

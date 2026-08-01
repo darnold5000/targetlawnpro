@@ -7,7 +7,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Project Gallery",
   description:
-    "Photos of completed lawn care and landscaping work by Weidner Lawnscape in Zionsville and surrounding areas.",
+    "Lawn care and landscaping project photos from Target Lawn Pro in Plainfield and nearby areas.",
   path: "/projects",
 });
 
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
         <SectionHeading
           eyebrow="Projects"
           title="Work that speaks for itself"
-          description="Photos from real Weidner Lawnscape jobs. Individual project titles weren’t published on the previous site, so this gallery focuses on visual results."
+          description="Gallery placeholders are shown until Target Lawn Pro Google Business photos are added. Request an estimate to see what we can do for your property."
         />
       </Section>
       <Section className="pt-8">

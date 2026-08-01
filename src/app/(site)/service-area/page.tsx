@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Service Area",
   description:
-    "Weidner Lawnscape serves Zionsville and surrounding areas. Request an estimate to confirm availability for your address.",
+    "Target Lawn Pro serves Plainfield and surrounding areas. Request an estimate to confirm availability for your address.",
   path: "/service-area",
 });
 
@@ -30,18 +30,18 @@ export default function ServiceAreaPage() {
               {siteConfig.serviceArea.cities.map((city) => (
                 <li key={city}>• {city}, Indiana</li>
               ))}
-              <li>• Surrounding communities (confirmed per request)</li>
+              <li>• Surrounding Hendricks County communities (confirmed per request)</li>
             </ul>
             <p className="mt-6 text-sm text-muted">
-              Residential and commercial properties may be considered based on location,
-              scope, and crew capacity. Addresses outside our usual area are flagged for
-              manual review rather than auto-rejected.
+              Residential properties are reviewed based on location, scope, and crew
+              capacity. Addresses outside our usual area are flagged for manual review
+              rather than auto-rejected.
             </p>
           </div>
           <div className="overflow-hidden rounded-xl border border-border bg-leaf-soft">
             <iframe
-              title="Map of Zionsville, Indiana"
-              src="https://maps.google.com/maps?q=Zionsville%2C%20IN&t=&z=12&ie=UTF8&iwloc=&output=embed"
+              title="Map of Plainfield, Indiana"
+              src="https://maps.google.com/maps?q=Plainfield%2C%20IN&t=&z=12&ie=UTF8&iwloc=&output=embed"
               className="h-80 w-full border-0 lg:h-full min-h-80"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

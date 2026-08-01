@@ -19,17 +19,17 @@ const displayFont = Fraunces({
 
 export const metadata: Metadata = {
   ...createPageMetadata({
-    title: `${siteConfig.name} | Lawn Care & Landscaping in Zionsville`,
+    title: `${siteConfig.name} | Lawn Care in Plainfield, IN`,
     description: siteConfig.description,
     path: "/",
   }),
   title: {
-    default: `${siteConfig.name} | Lawn Care & Landscaping in Zionsville`,
+    default: `${siteConfig.name} | Lawn Care in Plainfield, IN`,
     template: `%s | ${siteConfig.name}`,
   },
   icons: {
-    icon: "/images/weidner/logo/logo-icon.webp",
-    apple: "/images/weidner/logo/logo-icon.webp",
+    icon: "/target-lawn-pro-icon.svg",
+    apple: "/target-lawn-pro-icon.svg",
   },
 };
 

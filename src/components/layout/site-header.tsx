@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import { navLinks, siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
@@ -14,14 +14,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href="/" className="shrink-0" onClick={() => setOpen(false)}>
-          <Image
-            src="/images/weidner/logo/logo-full.webp"
-            alt={siteConfig.name}
-            width={220}
-            height={80}
-            className="h-10 w-auto sm:h-12"
-            priority
-          />
+          <BrandLogo />
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">

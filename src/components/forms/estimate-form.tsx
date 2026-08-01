@@ -20,7 +20,7 @@ const initial = {
   phone: "",
   preferredContact: "phone",
   address: "",
-  city: "Zionsville",
+  city: "Plainfield",
   zip: "",
   serviceType: "lawn-mowing",
   projectDescription: "",

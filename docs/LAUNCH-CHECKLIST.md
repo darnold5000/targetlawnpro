@@ -1,4 +1,4 @@
-# Launch checklist — Weidner Lawnscape
+# Launch checklist — Target Lawn Pro
 
 ## Before applying migrations
 
