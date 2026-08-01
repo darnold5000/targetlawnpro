@@ -44,13 +44,13 @@ export default function HomePage() {
       <section className="relative min-h-[88vh] overflow-hidden bg-evergreen-deep text-white">
         <Image
           src={imageAssets.hero}
-          alt="Target Lawn Pro maintaining a residential lawn"
+          alt="Sunlit green lawn with mature trees"
           fill
           priority
-          className="object-cover object-[50%_48%] brightness-[1.1] sm:object-[50%_44%]"
+          className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-evergreen-deep/82 via-evergreen-deep/58 to-evergreen-deep/28" />
+        <div className="absolute inset-0 bg-gradient-to-r from-evergreen-deep/88 via-evergreen-deep/62 to-evergreen-deep/20" />
         <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-4 pb-16 pt-28 sm:px-6 sm:pb-20">
           <p className="animate-fade-up text-sm font-semibold tracking-[0.18em] text-sand/90 uppercase">
             {siteConfig.name}

@@ -1,6 +1,6 @@
 /** Public image paths for Target Lawn Pro marketing assets. */
 export const imageAssets = {
-  hero: "/images/target-lawn-pro/hero/hero-main.webp",
+  hero: "/images/target-lawn-pro/hero/hero-sunlit-park.webp",
   about: "/images/target-lawn-pro/services/about.webp",
   logoIcon: "/images/target-lawn-pro/logo/logo-icon.webp",
   services: {
